@@ -1,3 +1,4 @@
+/* color */
 p, 
 label {
     font:
@@ -6,5 +7,17 @@ label {
 }
 
 input {
+    margin: 0.4rem;
+}
+
+/* search */
+label{
+    display: block;
+    font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+input,
+label {
     margin: 0.4rem;
 }
