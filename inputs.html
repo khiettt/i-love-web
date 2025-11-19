@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inputs</title>
+    <link rel="stylesheet" href="inputs.css">
+</head>
+<body>
+    <p>Kies een kleur</p>
+
+    <div>
+        <input type="color" id="foreground" name="eerste kleur" value="#e66465"/>
+        <label for="foreground">foreground color</label>
+    </div>
+
+    <div>
+        <input
+        type="color"
+        id="background"
+        name="tweede kleur"
+        value="oklab(50% 0.1 0.1 / 0.5)"
+        colorspace="display-p3"
+        alpha />
+        <label for="background">background color</label>
+    </div>
+    
+</body>
+</html>
