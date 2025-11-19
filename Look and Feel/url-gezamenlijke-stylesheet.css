@@ -1,0 +1,132 @@
+/* We gebruiken hier Cascade layers, wat mogelijke problemen met Specificiteit voorkomt
+   https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers
+   https://css-tricks.com/css-cascade-layers/ */
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+    font-family: "buurtcampus";
+    src: url(./BuurtCampusArial-Bold.woff);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "buurtcampus";
+    color: var(--paarsBlauw);
+}
+
+:root {
+    --torenOranje: hsl(22, 91%, 48%);
+    --paarsBlauw: hsl(239, 33%, 30%);
+    --mosGroen: hsl(74, 37%, 47%);
+    --zee: hsl(186, 85%, 21%);
+    --modder: hsl(39, 14%, 36%);
+    --luchtBlauw:hsl(221, 23%, 76%);
+    --bosGroen: hsl(149, 39%, 25%);
+    --grasGroen: hsl(88, 63%, 40%);
+    --kauwgomRoze: hsl(23, 88%, 80%);
+    --steenGrijs: hsl(32, 10%, 71%);  
+}
+
+
+@layer styleguide {
+
+    /* Schrijf hier de verschillende stijlen, die
+       gedeeld gaan worden door jullie projecten */
+    .oranje {
+        background-color: var(--torenOranje);
+    } 
+
+    .paars-blauw {
+        background-color: var(--paarsBlauw);
+    }
+
+    .mos-groen {
+        background-color: var(--mosGroen);
+    }
+
+    .zee-blauw {
+        background-color: var(--zee);
+    }
+
+    .modder-bruin {
+        background-color: var(--modder);
+    }
+
+    .lucht-blauw {
+        background-color: var(--lichtBlauw);
+    }
+
+    .bos-groen {
+        background-color: var(--bosGroen);
+    }
+
+    .gras-groen {
+        background-color: var(--grasGroen);
+    }
+
+    .kauwgom-roze {
+        background-color: var(--kauwgomRoze);
+    }
+
+    .steen-grijs {
+        background-color: var(--steenGrijs);
+    }
+    
+    /* Kleuren */
+    .color-example {
+        background-color: #bada55;
+    }
+
+    /* Typografie */
+    .kop-1 { 
+        font-size: 28pt;
+    }
+
+
+    .kop-2 { 
+        font-size: 18pt ;  
+    }
+
+    .kop-3 {
+        font-size: 12pt;
+    }
+
+    .kop-4 {
+        font-size: 10pt;
+    }
+
+    .kop-5 {
+        font-size: 10pt;
+    }
+
+    .kop-6 {
+        font-size: 10pt;
+    }
+        
+    .alinea-tekst {
+        line-height: 1.4;
+        font-size: 10pt;
+    }
+
+    /* Formulier elementen */
+
+
+    /* Knoppen elementen */
+    .lees-meer {
+        background-color: var(--torenOranje);
+        color: #ffffff;
+        border: 0px solid #ffffff;
+        border-radius: 100px;
+        padding: 1em 2em;   
+        font-weight: 600;
+        cursor: pointer;
+        align-self: flex-start;
+        text-decoration: none;
+    }
+
+    .lees-meer:hover {
+        background-color: var(--modder);
+    }
+}
