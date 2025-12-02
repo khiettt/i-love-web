@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form types and attributes</title>
+    <link rel="stylesheet" href="form-types-and-attributes.css">
+</head>
+<body>
+    <h1>Form types and attrubutes</h1>
+
+    <h2>Waarom heeft elk input een label nodig? </h2>
+    <p>labels bij input zijn er vooral zodat het systeem precies weet welke informatie waarvoor bedoelt is</p>
+
+    <h2>Wat doe je met de attributen type, autocomplete, inputmode en enterkeyhint? </h2>
+    <ul>
+        <li ::marker>Type</li>
+        <p>Basically wat voor veld het is</p>
+        <p>type="text"> gewone tekst</p>
+        <p>type="email"> controleerd of iets op lijkt</p>
+        <p>type="number"> alleen cijfers</p>
+        <p>type="password"> verbergt je invoer</p>
+    </ul>
+
+    <br>
+
+    <ul>
+        <li ::marker>autocomplete</li>
+        <p>Dit is voor automatische aanvullen voor velden</p>
+        <label for="firstName">First Name:</label>
+        <input name="firstName" id="firstName" type="text" autocomplete="given-name" />
+
+        <label for="lastName">Last Name:</label>
+        <input name="lastName" id="lastName" type="text" autocomplete="family-name" />
+
+        <label for="email">Email:</label>
+        <input name="email" id="email" type="email" autocomplete="off" />
+
+    </ul>
+
+    <br>
+
+    <ul>
+        <li ::marker>inputmode</li>
+        <p>Dit bepaald welke toestenbord iemand krijgt op zijn telefoon</p>
+        <label for="text">Numerieke toestenbord:</label>
+        <input type="text" inputmode="numeric">
+        <label for="text"> Toestenbord met komma/punt:</label>
+        <input type="text" inputmode="decimal">
+        <label for="text">Toestenbord met @ erin:</label>
+        <input type="text" inputmode="email">
+        <label for="text">Telefoon toestenbord:</label>
+        <input type="text" inputmode="tel">
+
+    </ul>
+
+     <ul>
+        <li ::marker>enterkeyhint</li>
+        <p>Dit bepaald welke tekst op "enter staat op mobiel" </p>
+        <label for="search">Search knop:</label>
+        <input enterkeyhint="search">
+
+        <label for="Send">Send knop:</label>
+        <input enterkeyhint="send">
+
+        <label for="Next">Next knop:</label>
+        <input enterkeyhint="next">
+
+        <label for="Done">Done knop:</label>
+        <input enterkeyhint="Done">
+
+    </ul>
+
+    <h2>Wat doen fieldsets en legende in een formulier? </h2>
+    <h3>Fieldset:</h3>
+    <p>Fieldset is een groepsvlak voor gerelateerde form-inputs</p> 
+
+    <form>
+        <fieldset>
+
+            <p>Je gebruikt het op dingen logisch bijelkaar te zetten zoals:</p>
+            <ul>
+                <li ::marker>
+                    Adressgegevens 
+                </li>
+                <li ::marker>
+                    Betaalgegevens
+                </li>
+                <li ::marker>
+                    persoonlijke info
+                </li>
+                <li ::marker>
+                    Optie die bij elkaar horen (checkboxes en radiobuttons)
+                </li>
+            </ul>
+            <p>PS... dit alles is ook in een fieldset ;)</p>
+        </fieldset>
+    </form>
+
+    <h3>Legend:</h3>
+    <p>Dit is de titel van je fieldset, het verteld waar de groep overgaat</p>
+    <p>Een mooi voorbeeld van "fielset" met "legend" er in</p>
+    <form>
+        <fieldset>
+            <legend>Kies je heading</legend>
+
+                <input type="radio" id="H1" name="eerste heading" value="h1" />
+            <label for="kraken">H1</label><br />
+
+                <input type="radio" id="H2" name="de tweede" value="h2" />
+            <label for="sasquatch">H2</label><br />
+
+                <input type="radio" id="H3" name="monster" value="h3" />
+            <label for="mothman">H3</label>
+        </fieldset>
+        <h3><em>Waarom is dit belangrijk?</em></h3>
+        <ul>
+            <li :marker>Het maakt formulieren duidelijker</li>
+            <li :marker>Het helpt browsers en stijlen om groepen consistente spacing te geven</li>
+            <li :marker>Is leesbaar voor de screenreaders</li>
+        </ul>
+    </form>
+    <h2>Wat doen required, maxlenght, min, max, step? </h2>
+
+    <p>Required - Je moet dit veld invullen, anders mag je het formulier niet versturen</p>
+    <p><em>Voorbeeld</em></p>
+    <input type="email" required>
+
+    <p>Maxlenght - Dit bepaald hoeveel tekens maximaal in een veld mogen</p>
+    <p><em>Voorbeeld</em></p>
+    <input type="text" maxlength="20">
+    <ul>
+        <li :marker>Je kunt max 20 tekens/cijfers/whatever typen</li>
+    </ul>
+
+    <p>Min en max - deze twee gelden vooral voor:</p>
+
+    <ul>
+        <li :marker> Nummers "type= number"</li>
+        <li :marker> Datums "type= date"</li>
+        <li :marker> Tijden "type= time"</li>
+
+        <br>
+
+        <li :marker> Min= minimale waarde</li>
+        <li :marker> Max= maximale waarde</li>
+
+        <br>
+
+        <p><em>voorbeeld:</em></p>
+        <p>Min:</p>
+        <input type="date" min="2025-01-01">
+        
+        <p><em>voorbeeld:</em></p>
+        <p>Max:</p>
+        <input type="number" min="1" max="10">
+    </ul>
+
+    <h2>Welke input pseudo-classes ken je nog niet? </h2>
+
+    <p>Er zijn er een heleboel die ik nog niet ken, maar ik kan er wel een paar opnoemen die ik graag wil leren:</p>
+    <ul>
+        <li :marker> :first-child</li>
+        <li :marker> :last-child</li>
+        <li :marker> :active</li>
+        <li :marker> :checked</li>
+    </ul>
+
+    
+</body>
+</html>
