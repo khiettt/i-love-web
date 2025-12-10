@@ -18,9 +18,14 @@
         inputElement.addEventListener('invalid', function(ev) {
 
         // Stap 3: pas de tekst in de validatiemelding aan
-        inputElement.setCustomValidity('Dit veld mag niet leeg zijn hoor..');
+        inputElement.setCustomValidity('NU INVULLEN');
 
         });
     </script>
+    <style>
+    form:has(:user-invalid) {
+        background: #faa;
+        }
+    </style>
 </body>
 </html>
