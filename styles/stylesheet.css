@@ -1,0 +1,28 @@
+nav{
+    height: 60px;
+    background-color: #EBE1C6;
+    border-radius: 10px;
+}
+
+
+.pink-background{
+    background-color: brown;
+    width: auto;
+    height: 200px;
+}
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+img{
+    width: 100px;
+}
+.note{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
